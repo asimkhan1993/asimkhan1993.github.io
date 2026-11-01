@@ -4,194 +4,1239 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Asim Shahzad | Research Profile</title>
+
+<title>Dr. Asim Shahzad | Academic Research Profile</title>
+
+<meta name="description" content="Academic research profile of Dr. Asim Shahzad, PhD in Control Science and Engineering. Research interests include machine learning, intelligent sensing, signal processing, fault diagnosis and condition monitoring.">
+
 <style>
-* { box-sizing: border-box; }
+
+/* ==================================
+   1. GLOBAL DESIGN
+================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  color: #263445;
-  background: #f7f9fc;
-  line-height: 1.7;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f7fb;
+    color: #263445;
+    line-height: 1.75;
 }
-header {
-  background: #10243e;
-  color: white;
-  padding: 55px 20px;
-  text-align: center;
+
+:root {
+    --navy: #10243e;
+    --blue: #1765a5;
+    --light-blue: #eaf3fb;
+    --text: #263445;
+    --muted: #64748b;
+    --white: #ffffff;
+    --border: #e2e8f0;
 }
-header h1 { font-size: 38px; margin: 0; }
-header p { color: #d4e2f2; }
-nav {
-  background: white;
-  padding: 15px;
-  text-align: center;
-  position: sticky;
-  top: 0;
-  border-bottom: 1px solid #ddd;
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 25px;
 }
-nav a {
-  margin: 0 12px;
-  color: #183c63;
-  text-decoration: none;
-  font-weight: bold;
-}
-main { max-width: 950px; margin: auto; padding: 25px; }
+
 section {
-  background: white;
-  padding: 25px;
-  margin: 22px 0;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px #00000008;
+    padding: 65px 0;
 }
-h2 { color: #173d65; }
-a { color: #1765a5; }
+
+.section-title {
+    text-align: center;
+    color: var(--navy);
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--muted);
+    max-width: 700px;
+    margin: 0 auto 38px;
+    font-size: 15px;
+}
+
+.section-line {
+    width: 55px;
+    height: 4px;
+    background: var(--blue);
+    border-radius: 5px;
+    margin: 0 auto 25px;
+}
+
+/* ==================================
+   2. HERO / PROFILE HEADER
+================================== */
+
+header {
+    background: linear-gradient(135deg, #10243e, #194b77);
+    color: white;
+    text-align: center;
+    padding: 65px 20px 55px;
+}
+
+.profile-photo {
+    width: 165px;
+    height: 165px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid white;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 20px #00000030;
+}
+
+header h1 {
+    font-size: 40px;
+    margin-bottom: 8px;
+    color: white;
+}
+
+header .designation {
+    font-size: 18px;
+    color: #e2eaf5;
+    margin-bottom: 8px;
+}
+
+header .research-tagline {
+    color: #c7ddf3;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.header-location {
+    color: #dbeafe;
+    font-size: 14px;
+}
+
+.header-buttons {
+    margin-top: 25px;
+}
+
+.header-buttons a {
+    display: inline-block;
+    padding: 10px 23px;
+    margin: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    background: white;
+    color: var(--navy);
+    transition: 0.3s;
+}
+
+.header-buttons a:hover {
+    background: #dbeafe;
+    transform: translateY(-2px);
+}
+
+/* ==================================
+   3. NAVIGATION
+================================== */
+
+nav {
+    background: white;
+    padding: 17px 10px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 12px #00000010;
+}
+
+nav a {
+    display: inline-block;
+    margin: 5px 12px;
+    text-decoration: none;
+    color: var(--navy);
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--blue);
+}
+
+/* ==================================
+   4. ABOUT ME
+================================== */
+
+.about-box {
+    background: white;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px #10243e0a;
+    border: 1px solid var(--border);
+}
+
+.about-box p {
+    margin-bottom: 17px;
+    color: var(--text);
+    text-align: justify;
+}
+
+.about-highlight {
+    border-left: 4px solid var(--blue);
+    background: var(--light-blue);
+    padding: 18px;
+    margin-top: 20px;
+    color: var(--navy);
+}
+
+/* ==================================
+   5. RESEARCH INTERESTS
+================================== */
+
+.research-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.research-card {
+    background: white;
+    padding: 25px 20px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    transition: 0.3s;
+}
+
+.research-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px #10243e12;
+}
+
+.research-card h3 {
+    color: var(--navy);
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.research-card p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* ==================================
+   6. RESEARCH PROJECTS
+================================== */
+
+.projects-section {
+    background: #eaf1f8;
+}
+
+.project-card {
+    background: white;
+    padding: 27px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border-left: 5px solid var(--blue);
+    box-shadow: 0 3px 15px #00000008;
+}
+
+.project-card h3 {
+    color: var(--navy);
+    margin-bottom: 10px;
+    font-size: 19px;
+}
+
+.project-card p {
+    color: var(--text);
+    font-size: 15px;
+}
+
+/* ==================================
+   7. PUBLICATIONS
+================================== */
+
+.publication-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.publication-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 3px 15px #00000008;
+    transition: 0.3s;
+}
+
+.publication-card:hover {
+    border-color: #8db8df;
+    box-shadow: 0 6px 20px #10243e12;
+}
+
+.paper-number {
+    color: var(--blue);
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.publication-card h3 {
+    color: #10243e;
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.journal {
+    color: #526579;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.doi-link {
+    display: inline-block;
+    color: #0877c9;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.doi-link:hover {
+    color: #e07828;
+    text-decoration: underline;
+}
+
+.status {
+    display: inline-block;
+    background: #fff2d6;
+    color: #875800;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* ==================================
+   8. EDUCATION
+================================== */
+
+.education-section {
+    background: #eaf1f8;
+}
+
+.education-card {
+    background: white;
+    padding: 24px;
+    margin-bottom: 17px;
+    border-radius: 10px;
+    border-left: 5px solid var(--blue);
+}
+
+.education-card h3 {
+    color: var(--navy);
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.education-card p {
+    color: var(--text);
+    font-size: 15px;
+}
+
+.education-date {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+/* ==================================
+   9. TECHNICAL SKILLS
+================================== */
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+.skill {
+    background: #eaf3fb;
+    color: #173d65;
+    border: 1px solid #d2e4f5;
+    border-radius: 25px;
+    padding: 9px 17px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* ==================================
+   10. ACADEMIC PROFILES & CONTACT
+================================== */
+
+.contact-section {
+    background: #10243e;
+    color: white;
+}
+
+.contact-section .section-title {
+    color: white;
+}
+
+.contact-section .section-subtitle {
+    color: #d4e2f2;
+}
+
+.contact-card {
+    max-width: 750px;
+    margin: auto;
+    text-align: center;
+    background: #193653;
+    border-radius: 12px;
+    padding: 35px;
+}
+
+.contact-card p {
+    color: #e2eaf5;
+    margin-bottom: 17px;
+}
+
+.contact-card a {
+    color: #8fcaff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-card a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.profile-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.profile-links a {
+    display: inline-block;
+    padding: 10px 17px;
+    border: 1px solid #8fcaff;
+    border-radius: 5px;
+    color: white;
+    transition: 0.3s;
+}
+
+.profile-links a:hover {
+    background: white;
+    color: var(--navy);
+    text-decoration: none;
+}
+
+.cv-button {
+    display: inline-block;
+    background: white;
+    color: var(--navy) !important;
+    padding: 12px 25px;
+    border-radius: 5px;
+    margin-top: 25px;
+}
+
+/* ==================================
+   11. FOOTER
+================================== */
+
 footer {
-  background: #10243e;
-  color: white;
-  text-align: center;
-  padding: 25px;
+    background: #0a192b;
+    text-align: center;
+    color: #cbd5e1;
+    padding: 22px;
+    font-size: 13px;
 }
+
+/* ==================================
+   12. MOBILE RESPONSIVENESS
+================================== */
+
+@media (max-width: 768px) {
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    .research-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    nav a {
+        margin: 5px 7px;
+        font-size: 12px;
+    }
+
+    .section-title {
+        font-size: 25px;
+    }
+
+    .about-box {
+        padding: 22px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .research-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-photo {
+        width: 135px;
+        height: 135px;
+    }
+
+    header h1 {
+        font-size: 27px;
+    }
+
+    .publication-card {
+        padding: 19px;
+    }
+
+    nav {
+        padding: 10px 4px;
+    }
+}
+
 </style>
 </head>
+
 <body>
 
-<header>
-  <header>
-  <img src="profile.jpeg"
-       alt="Dr. Asim Shahzad"
-       style="width:150px;height:150px;
-       border-radius:50%;object-fit:cover;
-       border:4px solid white;margin-bottom:15px;">
+<!-- ==================================
+     HEADER / PROFILE
+================================== -->
 
-  <h1>Dr. Asim Shahzad</h1>
-  <p>PhD in Control Science and Engineering</p>
-  <p>Machine Learning | Intelligent Sensing |
-     Signal Processing | Fault Diagnosis</p>
-  <p>Researcher in Intelligent Condition Monitoring</p>
+<header>
+
+    <img src="profile.jpeg"
+         alt="Dr. Asim Shahzad"
+         class="profile-photo">
+
+    <h1>Dr. Asim Shahzad</h1>
+
+    <p class="designation">
+        PhD in Control Science and Engineering
+    </p>
+
+    <p class="research-tagline">
+        Machine Learning | Intelligent Sensing |
+        Signal Processing | Fault Diagnosis
+    </p>
+
+    <p class="header-location">
+        Researcher in Intelligent Condition Monitoring
+    </p>
+
+    <div class="header-buttons">
+
+        <a href="#publications">View Publications</a>
+
+        <a href="Asim_CV_PhD.pdf" target="_blank">
+            Download CV
+        </a>
+
+    </div>
+
 </header>
 
+
+<!-- ==================================
+     NAVIGATION
+================================== -->
+
 <nav>
-  <a href="#about">About</a>
-  <a href="#research">Research</a>
-  <a href="#publications">Publications</a>
-  <a href="#education">Education</a>
-  <a href="#contact">Contact</a>
+
+    <a href="#about">About</a>
+    <a href="#research">Research</a>
+    <a href="#projects">Projects</a>
+    <a href="#publications">Publications</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+
 </nav>
 
+
 <main>
+
+<!-- ==================================
+     ABOUT ME
+================================== -->
+
 <section id="about">
-  <h2>About Me</h2>
-  <p>
-  I am a Machine Learning Engineer with PhD in Control Science and Engineering
-  from Shandong University, China.
-  My research focuses on intelligent fault detection using signal analysis, vibration
-  signal processing, signal processing in wireless networks for path planning, integration of machine learning and deep learning
-  for complex engineering and research solution, etc.
-  </p>
-  <p>
-  My research aims to develop interpretable physics-inspired neural networks,
-  intelligent approaches for reliable
-  health monitoring under non-stationary operating
-  conditions, digital twins, wireless networks etc.
-  </p>
-  <p><a href="Asim_CV_PhD.pdf" target="_blank">Download My CV</a></p>
+
+    <div class="container">
+
+        <h2 class="section-title">About Me</h2>
+        <div class="section-line"></div>
+
+        <div class="about-box">
+
+            <p>
+                I am a Machine Learning Engineer and PhD graduate
+                in Control Science and Engineering from Shandong
+                University, China, having completed my doctoral
+                degree in September 2026.
+            </p>
+
+            <p>
+                My research focuses on intelligent fault detection,
+                vibration signal analysis, advanced signal processing,
+                and the integration of machine learning and deep
+                learning for complex engineering applications.
+                My work spans rotating machinery condition monitoring,
+                fault diagnosis, health assessment, and intelligent
+                sensing, alongside research involving wireless sensor
+                networks and energy-aware optimization.
+            </p>
+
+            <p>
+                I am particularly interested in developing
+                interpretable physics-inspired neural networks,
+                frequency-aware learning architectures, and
+                intelligent diagnostic methodologies for reliable
+                engineering systems under non-stationary and
+                variable operating conditions.
+            </p>
+
+            <div class="about-highlight">
+                <strong>Research Philosophy:</strong>
+                Bridging physical understanding, advanced signal
+                processing, and artificial intelligence to develop
+                reliable and interpretable solutions for real-world
+                engineering challenges.
+            </div>
+
+        </div>
+
+    </div>
+
 </section>
+
+
+<!-- ==================================
+     RESEARCH INTERESTS
+================================== -->
 
 <section id="research">
-  <h2>Research Interests</h2>
-  <ul>
-    <li>Application of Machine Learning and Deep Learning algorithms</li>
-    <li>Intelligent Signal analysis and Processing</li>
-    <li>Fault Diagnosis and Health Monitoring</li>
-    <li>Implementation of Physics-Inspired Deep Learning Techniques</li>
-    <li>Digital Twins for Signal Processing</li>
-    <li>Wavelet Analysis and Feature Learning</li>
-    <li>Time-Frequency Analysis</li>
-  </ul>
+
+    <div class="container">
+
+        <h2 class="section-title">Research Interests</h2>
+
+        <div class="section-line"></div>
+
+        <p class="section-subtitle">
+            My research integrates artificial intelligence,
+            signal processing and intelligent engineering systems.
+        </p>
+
+        <div class="research-grid">
+
+            <div class="research-card">
+                <h3>Machine Learning & Deep Learning</h3>
+                <p>
+                    Development and application of advanced
+                    machine learning and deep learning algorithms
+                    for intelligent engineering systems.
+                </p>
+            </div>
+
+            <div class="research-card">
+                <h3>Intelligent Signal Processing</h3>
+                <p>
+                    Vibration analysis, feature extraction,
+                    time-frequency representations and
+                    intelligent signal interpretation.
+                </p>
+            </div>
+
+            <div class="research-card">
+                <h3>Fault Diagnosis & PHM</h3>
+                <p>
+                    Intelligent fault detection, machinery
+                    condition monitoring, prognostics and
+                    health management.
+                </p>
+            </div>
+
+            <div class="research-card">
+                <h3>Physics-Informed AI</h3>
+                <p>
+                    Physics-inspired neural networks and
+                    interpretable learning architectures
+                    for reliable diagnostic applications.
+                </p>
+            </div>
+
+            <div class="research-card">
+                <h3>Digital Twins</h3>
+                <p>
+                    Digital twin-assisted modelling,
+                    intelligent monitoring and engineering
+                    system health assessment.
+                </p>
+            </div>
+
+            <div class="research-card">
+                <h3>Wireless Sensor Networks</h3>
+                <p>
+                    Energy-aware optimization, mobile charging
+                    and intelligent resource management in
+                    rechargeable sensor networks.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
 </section>
+
+
+<!-- ==================================
+     RESEARCH PROJECTS
+================================== -->
+
+<section id="projects" class="projects-section">
+
+    <div class="container">
+
+        <h2 class="section-title">Research Projects & Contributions</h2>
+
+        <div class="section-line"></div>
+
+        <p class="section-subtitle">
+            Selected research directions reflecting my
+            contributions to intelligent sensing and
+            AI-driven engineering.
+        </p>
+
+        <div class="project-card">
+
+            <h3>
+                01. Physics-Inspired Deep Learning for
+                Machinery Fault Diagnosis
+            </h3>
+
+            <p>
+                Investigation of physics-inspired deep learning
+                architectures, including dilated Kronecker
+                convolution and intelligent feature learning,
+                for robust fault diagnosis of rotating machinery
+                under variable operating conditions.
+            </p>
+
+        </div>
+
+        <div class="project-card">
+
+            <h3>
+                02. Entropy-Augmented Multiscale Feature Fusion
+            </h3>
+
+            <p>
+                Development of entropy-augmented multiscale
+                feature fusion methodologies for extracting
+                discriminative information from vibration signals
+                and improving rolling bearing fault diagnosis.
+            </p>
+
+        </div>
+
+        <div class="project-card">
+
+            <h3>
+                03. Frequency-Aware Transformer-Based Fault Diagnosis
+            </h3>
+
+            <p>
+                Investigation of frequency-aware transformer
+                fusion techniques for intelligent feature
+                representation and fault diagnosis of rolling
+                bearings under variable operating conditions.
+            </p>
+
+        </div>
+
+        <div class="project-card">
+
+            <h3>
+                04. Energy-Aware Optimization in Wireless Sensor Networks
+            </h3>
+
+            <p>
+                Research on learning-based mobile charging,
+                energy-aware resource allocation and optimization
+                of rechargeable sensor networks under stochastic
+                energy dynamics.
+            </p>
+
+        </div>
+
+        <div class="project-card">
+
+            <h3>
+                05. Battery Swapping Infrastructure Optimization
+            </h3>
+
+            <p>
+                Research involving multi-objective optimization,
+                battery degradation considerations, geographical
+                information systems and renewable-powered
+                battery swapping infrastructure.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================
+     PUBLICATIONS
+================================== -->
 
 <section id="publications">
-  <h2>Research Publications</h2>
 
-  <h3>Published Journal Articles</h3>
+    <div class="container">
 
-  <ol>
-    <li>
-      <b>[Multiscale Feature Fusion by Entropy-Augmented KCFP for Rolling Bearing Fault Diagnosis]</b><br>
-      Journal: [IEEE Sensors Journal], [2025].<br>
-      DOI: <a href="https://doi.org/10.1109/JSEN.2025.3573497">View Paper</a>
-    </li>
+        <h2 class="section-title">Research Publications</h2>
 
-    <li>
-      <b>[
-Physics-inspired deep learning network using dilated kronecker convolution for rotary machines under variable operating conditions]</b><br>
-      Journal: [Journal of the Franklin Institute], [2025].<br>
-      DOI: <a href="https://doi.org/10.1016/j.jfranklin.2025.108219">View Paper</a>
-    </li>
+        <div class="section-line"></div>
 
-    <li>
-      <b>[Frequency-aware transformer fusion for intelligent fault diagnosis of rolling bearings under variable operating conditions]</b><br>
-      Journal: [Measurement Science and Technology], [2026].<br>
-      DOI: <a href="https://doi.org/10.1088/1361-6501/ae2949">View Paper</a>
-    </li>
+        <p class="section-subtitle">
+            Peer-reviewed journal publications in machine learning,
+            intelligent fault diagnosis, signal processing,
+            wireless sensor networks and energy optimization.
+        </p>
 
-    <li>
-      <b>[Learning-based energy-aware mobile charging under stochastic energy dynamics in rechargeable sensor networks]</b><br>
-      Journal: [Engineering Research Express], [2026].<br>
-      DOI: <a href="https://doi.org/10.1088/2631-8695/aea8d4">View Paper</a>
-    </li>
+        <h3 style="color:#10243e; margin-bottom:22px;">
+            Published Journal Articles
+        </h3>
 
-    <li>
-      <b>[Thermal-aware multi-objective optimization of battery swapping station with operational cost and battery degradation considerations]</b><br>
-      Journal: [Scientific Reports], [2026].<br>
-      DOI: <a href="https://doi.org/10.1038/s41598-026-69124-y">View Paper</a>
-    </li>
+        <div class="publication-list">
 
-    <li>
-      <b>[A MILP–GIS Siting-and-Sizing Framework for Renewable-Powered Battery Swapping Station Networks with Hourly Feasibility Screening]</b><br>
-      Journal: [Electronics, MDPI], [2026].<br>
-      DOI: <a href="https://doi.org/10.3390/electronics15194480">View Paper</a>
-    </li>
-  </ol>
-  <p>
-    View my complete publication record:
-    <a href="https://scholar.google.com/citations?user=PmY0KM0AAAAJ&hl=en"
-       target="_blank">Google Scholar</a>
-  </p>
-  <p>
-    ORCID:
-    <a href="https://orcid.org/0009-0000-6948-3790"
-       target="_blank">0009-0000-6948-3790</a>
-  </p>
+            <!-- PAPER 1 -->
+
+            <div class="publication-card">
+
+                <div class="paper-number">PUBLICATION 01</div>
+
+                <h3>
+                    Multiscale Feature Fusion by Entropy-Augmented
+                    KCFP for Rolling Bearing Fault Diagnosis
+                </h3>
+
+                <p class="journal">
+                    <strong>Journal:</strong> IEEE Sensors Journal
+                    | <strong>Year:</strong> 2025
+                </p>
+
+                <a class="doi-link"
+                   href="https://doi.org/10.1109/JSEN.2025.3573497"
+                   target="_blank">
+                    View Published Paper →
+                </a>
+
+            </div>
+
+
+            <!-- PAPER 2 -->
+
+            <div class="publication-card">
+
+                <div class="paper-number">PUBLICATION 02</div>
+
+                <h3>
+                    Physics-inspired Deep Learning Network Using
+                    Dilated Kronecker Convolution for Rotary Machines
+                    Under Variable Operating Conditions
+                </h3>
+
+                <p class="journal">
+                    <strong>Journal:</strong> Journal of the Franklin Institute
+                    | <strong>Year:</strong> 2025
+                </p>
+
+                <a class="doi-link"
+                   href="https://doi.org/10.1016/j.jfranklin.2025.108219"
+                   target="_blank">
+                    View Published Paper →
+                </a>
+
+            </div>
+
+
+            <!-- PAPER 3 -->
+
+            <div class="publication-card">
+
+                <div class="paper-number">PUBLICATION 03</div>
+
+                <h3>
+                    Frequency-aware Transformer Fusion for
+                    Intelligent Fault Diagnosis of Rolling Bearings
+                    Under Variable Operating Conditions
+                </h3>
+
+                <p class="journal">
+                    <strong>Journal:</strong> Measurement Science
+                    and Technology | <strong>Year:</strong> 2026
+                </p>
+
+                <a class="doi-link"
+                   href="https://doi.org/10.1088/1361-6501/ae2949"
+                   target="_blank">
+                    View Published Paper →
+                </a>
+
+            </div>
+
+
+            <!-- PAPER 4 -->
+
+            <div class="publication-card">
+
+                <div class="paper-number">PUBLICATION 04</div>
+
+                <h3>
+                    Learning-based Energy-aware Mobile Charging
+                    Under Stochastic Energy Dynamics in
+                    Rechargeable Sensor Networks
+                </h3>
+
+                <p class="journal">
+                    <strong>Journal:</strong> Engineering Research Express
+                    | <strong>Year:</strong> 2026
+                </p>
+
+                <a class="doi-link"
+                   href="https://doi.org/10.1088/2631-8695/aea8d4"
+                   target="_blank">
+                    View Published Paper →
+                </a>
+
+            </div>
+
+
+            <!-- PAPER 5 -->
+
+            <div class="publication-card">
+
+                <div class="paper-number">PUBLICATION 05</div>
+
+                <h3>
+                    Thermal-aware Multi-objective Optimization of
+                    Battery Swapping Station with Operational Cost
+                    and Battery Degradation Considerations
+                </h3>
+
+                <p class="journal">
+                    <strong>Journal:</strong> Scientific Reports
+                    | <strong>Year:</strong> 2026
+                </p>
+
+                <a class="doi-link"
+                   href="https://doi.org/10.1038/s41598-026-69124-y"
+                   target="_blank">
+                    View Published Paper →
+                </a>
+
+            </div>
+
+
+            <!-- PAPER 6 -->
+
+            <div class="publication-card">
+
+                <div class="paper-number">PUBLICATION 06</div>
+
+                <h3>
+                    A MILP–GIS Siting-and-Sizing Framework for
+                    Renewable-Powered Battery Swapping Station
+                    Networks with Hourly Feasibility Screening
+                </h3>
+
+                <p class="journal">
+                    <strong>Journal:</strong> Electronics (MDPI)
+                    | <strong>Year:</strong> 2026
+                </p>
+
+                <a class="doi-link"
+                   href="https://doi.org/10.3390/electronics15194480"
+                   target="_blank">
+                    View Published Paper →
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- UNDER REVIEW -->
+
+        <h3 style="color:#10243e; margin-top:45px; margin-bottom:20px;">
+            Manuscript Under Review
+        </h3>
+
+        <div class="publication-card">
+
+            <span class="status">Under Review</span>
+
+            <h3>
+                [Add the exact title of your seventh manuscript here]
+            </h3>
+
+            <p class="journal">
+                Manuscript currently under peer review.
+            </p>
+
+        </div>
+
+
+        <!-- SCHOLAR AND ORCID -->
+
+        <div style="text-align:center; margin-top:35px;">
+
+            <p style="margin-bottom:12px; color:#263445;">
+                Explore my complete publication record and
+                academic research profile.
+            </p>
+
+            <a class="doi-link"
+               href="https://scholar.google.com/citations?user=PmY0KM0AAAAJ&hl=en"
+               target="_blank">
+                Google Scholar – Publications & Citations →
+            </a>
+
+            <br><br>
+
+            <a class="doi-link"
+               href="https://orcid.org/0009-0000-6948-3790"
+               target="_blank">
+                ORCID: 0009-0000-6948-3790 →
+            </a>
+
+        </div>
+
+    </div>
+
 </section>
 
-<section id="education">
-  <h2>Education</h2>
-  <p><b>PhD, Control Science and Engineering</b><br>
-  Shandong University, China</p>
-  <p><b>Master's Degree</b><br>
-  Control Science and Engineering, China</p>
-  <p><b>Bachelor's Degree</b><br>
-  Computer Engineering, Pakistan</p>
+
+<!-- ==================================
+     EDUCATION
+================================== -->
+
+<section id="education" class="education-section">
+
+    <div class="container">
+
+        <h2 class="section-title">Education</h2>
+
+        <div class="section-line"></div>
+
+        <div class="education-card">
+
+            <h3>
+                PhD in Control Science and Engineering
+            </h3>
+
+            <p>
+                Shandong University, Jinan, China
+            </p>
+
+            <span class="education-date">
+                September 2026
+            </span>
+
+        </div>
+
+
+        <div class="education-card">
+
+            <h3>
+                Master's Degree in Control Science and Engineering
+            </h3>
+
+            <p>
+                China
+            </p>
+
+        </div>
+
+
+        <div class="education-card">
+
+            <h3>
+                Bachelor's Degree in Computer Engineering
+            </h3>
+
+            <p>
+                Pakistan
+            </p>
+
+        </div>
+
+    </div>
+
 </section>
 
-<section id="contact">
-  <h2>Contact</h2>
-  <p>Email: asim.shahzad1993@gmail.com</p>
-  <p>
-    <a href="https://www.linkedin.com/in/asim-shahzad95/"
-       target="_blank">LinkedIn</a> |
-    <a href="https://github.com/asimkhan1993/"
-       target="_blank">GitHub</a> |
-    <a href="https://orcid.org/0009-0000-6948-3790"
-       target="_blank">ORCID</a>
-  </p>
+
+<!-- ==================================
+     TECHNICAL SKILLS
+================================== -->
+
+<section id="skills">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Technical Skills & Expertise
+        </h2>
+
+        <div class="section-line"></div>
+
+        <p class="section-subtitle">
+            Computational tools, analytical techniques and
+            technologies applied in my research.
+        </p>
+
+        <div class="skills-container">
+
+            <span class="skill">Python</span>
+            <span class="skill">MATLAB</span>
+            <span class="skill">PyTorch</span>
+            <span class="skill">TensorFlow</span>
+            <span class="skill">Machine Learning</span>
+            <span class="skill">Deep Learning</span>
+            <span class="skill">Signal Processing</span>
+            <span class="skill">Vibration Analysis</span>
+            <span class="skill">Time-Frequency Analysis</span>
+            <span class="skill">Transformers</span>
+            <span class="skill">CNN</span>
+            <span class="skill">LSTM</span>
+            <span class="skill">Digital Twins</span>
+            <span class="skill">Feature Engineering</span>
+            <span class="skill">Statistical Analysis</span>
+
+        </div>
+
+    </div>
+
 </section>
+
+
+<!-- ==================================
+     CONTACT AND ACADEMIC PROFILES
+================================== -->
+
+<section id="contact" class="contact-section">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Academic Profiles & Contact
+        </h2>
+
+        <div class="section-line"></div>
+
+        <p class="section-subtitle">
+            Open to academic collaborations, postdoctoral
+            research opportunities and interdisciplinary
+            research partnerships.
+        </p>
+
+        <div class="contact-card">
+
+            <p>
+                <strong>Email:</strong><br>
+                <a href="mailto:asim.shahzad1993@gmail.com">
+                    asim.shahzad1993@gmail.com
+                </a>
+            </p>
+
+            <p>
+                <strong>Academic Researcher</strong><br>
+                Control Science and Engineering
+            </p>
+
+            <div class="profile-links">
+
+                <a href="https://scholar.google.com/citations?user=PmY0KM0AAAAJ&hl=en"
+                   target="_blank">
+                    Google Scholar
+                </a>
+
+                <a href="https://orcid.org/0009-0000-6948-3790"
+                   target="_blank">
+                    ORCID
+                </a>
+
+                <a href="https://www.linkedin.com/in/asim-shahzad95/"
+                   target="_blank">
+                    LinkedIn
+                </a>
+
+                <a href="https://github.com/asimkhan1993/"
+                   target="_blank">
+                    GitHub
+                </a>
+
+            </div>
+
+            <a class="cv-button"
+               href="Asim_CV_PhD.pdf"
+               target="_blank">
+                Download Academic CV (PDF)
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
 </main>
 
+
+<!-- ==================================
+     FOOTER
+================================== -->
+
 <footer>
-  © 2026 Dr. Asim Shahzad | Academic Research Profile
+
+    <p>
+        © 2026 Dr. Asim Shahzad.
+        Academic Research Profile.
+    </p>
+
+    <p>
+        Machine Learning | Intelligent Sensing |
+        Signal Processing | Engineering AI
+    </p>
+
 </footer>
 
 </body>
